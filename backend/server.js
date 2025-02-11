@@ -14,7 +14,7 @@ app.use("/api/v1/auth", authRoutes);
 
 app.get("/", (req, res) => {
   res.send({
-    message: "Welcome to edgistify",
+    message: "Welcome TO EDGISTIFY",
   });
 });
 

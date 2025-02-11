@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 
 export const registerController = async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password, phone, address } = req.body;
     if (!name) {
       return res.send({ error: "Name is required" });
     }
@@ -14,7 +14,12 @@ export const registerController = async (req, res) => {
     if (!password) {
       return res.send({ error: "Password is required" });
     }
-
+    if (!phone) {
+      return res.send({ error: "Password is required" });
+    }
+    if (!address) {
+      return res.send({ error: "Password is required" });
+    }
     const existingUser = await users.findOne({ email });
     if (existingUser) {
       return res.status(200).send({
@@ -28,6 +33,9 @@ export const registerController = async (req, res) => {
       name,
       email,
       password: hashedPassword,
+      phone,
+      address,
+      role,
     }).save();
 
     res.status(201).send({
@@ -97,4 +105,8 @@ export const loginController = async (req, res) => {
       error,
     });
   }
+};
+
+export const testController = (req, res) => {
+  res.send("Protected Route");
 };
