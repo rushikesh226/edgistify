@@ -24,9 +24,19 @@ export const requireSignIn = async (req, res, next) => {
 };
 
 // export const isAdmin = async (req, res, next) => {
+//   const user = await users.findById(req.user._id);
+//   console.log(user, "in line 28");
 //   try {
 //     const user = await users.findById(req.user._id);
+//     if (!user) {
+//       console.log(user.role, "role is");
+//       return res.status(404).send({
+//         success: false,
+//         message: "User not found",
+//       });
 //     }
+//     console.log(user?.role, "role is");
+
 //     if (user.role !== 1) {
 //       return res.status(401).send({
 //         success: false,
