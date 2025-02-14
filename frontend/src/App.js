@@ -1,12 +1,13 @@
-import './App.css';
+import "./App.css";
+import Layout from "./Components/Layout/Layout";
+import AllRoutes from "./Routes/AllRoutes";
 
 function App() {
   return (
-    <div className="bg-gray-600 text-white h-screen p-2">
-      <h1>Hello World</h1>
+    <div className="app">
+      <AllRoutes/>
     </div>
   );
 }
 
 export default App;
- 
