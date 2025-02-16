@@ -4,7 +4,7 @@ import { FaUserShield, FaLock, FaFileContract } from "react-icons/fa";
 
 const Policy = () => {
   return (
-    <Layout>
+    <Layout title="Policy">
       <div className="privacy-container">
         <div className="privacy-image">
           <img
